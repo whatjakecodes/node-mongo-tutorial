@@ -1,0 +1,16 @@
+{
+  "name": "node-mongo-tutorial",
+  "version": "1.0.0",
+  "description": "https://appdividend.com/2017/06/18/node-js-express-tutorial/#Step_1_Initialize_packagejson_file",
+  "main": "index.js",
+  "author": "Jake",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.12"
+  },
+  "scripts": {
+    "start": "nodemon src/app.js"
+  }
+}
