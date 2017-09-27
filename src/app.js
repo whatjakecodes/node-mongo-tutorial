@@ -3,13 +3,16 @@ var mongoose = require('mongoose');
 var app = express();
 var port = 3000;
 var itemRouter = require('./routes/itemRoutes');
+var bodyParser = require('body-parser');
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use('/items', itemRouter);
 
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://jakey:climaxpoop@ds040017.mlab.com:40017/tutorial-db')
+mongoose.connect('mongodb://jakey:climaxpoop@ds040017.mlab.com:40017/tutorial-db',  { useMongoClient: true })
 .then(() => {
     console.log('Connected to database.');
 })
