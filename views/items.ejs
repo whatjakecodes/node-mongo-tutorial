@@ -22,13 +22,18 @@
         </tr>
       </thead>
       <tbody>
-        <% for(var i=0; i < itms.length; i++) { %>
+        <% for(var i=0; i < items.length; i++) { %>
           <tr>
             <td>
-              <%= itms[i].item %>
+              <p>
+                <%= items[i].item %>
+              </p>
+              <p>
+                <%= items[i].created_date %>
+              </p>
             </td>
             <td>
-              <a href="/items/edit/<%= itms[i]._id %>" class="btn btn-primary">Edit</a>
+              <a href="/items/edit/<%= items[i]._id %>" class="btn btn-primary">Edit</a>
             </td>
             <td>
               <a href="" class="btn btn-danger">Delete</a>

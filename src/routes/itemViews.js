@@ -3,12 +3,12 @@ let itemRouter = express.Router();
 var Item = require('../api/models/Item');
 
 itemRouter.route('/').get((req, res) => {
-  Item.find(function (err, itms) {
+  Item.find(function (err, items) {
     if (err) {
       console.log(err);
     }
     else {
-      res.render('items', { itms: itms });
+      res.render('items', { items });
     }
   });
 });
